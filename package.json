@@ -8,7 +8,7 @@
   "scripts": {
     "start": "node server.js"
   },
-  "name": "htdocs",
+  "name": "tungmmo",
   "version": "1.0.0",
   "description": "y",
   "main": "server.js",
