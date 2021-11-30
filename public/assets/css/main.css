@@ -1,0 +1,193 @@
+
+@media (min-width: 576px) {
+    body{
+        opacity: 0;
+    }
+}
+
+@media (min-width: 768px) { 
+    body{
+        opacity: 0;
+    }
+}
+
+@media (min-width: 992px) { 
+body{
+    opacity: 0;
+}
+}
+@media (min-width: 1200px) { 
+    .navbar {
+        position: fixed;
+        top: 30px;
+        right: 0;
+        left: 33px;
+        width: 1300px;
+        height: 50px;
+        padding: 10px 0;
+        border-radius: 15px;
+        background-color: #fff;
+        z-index: 1030;
+    }
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 0;
+        left: 20px;
+        z-index: 1030;
+       
+    }
+
+    .logo img{
+        border-radius: 50%;
+        width: 50px;
+        height:50px;
+    }
+
+    .verify{
+        position: absolute;
+        top: 45px;
+        left: 52px;
+        z-index: 1030;
+        color: #ffad00;
+        background: #000;
+        border-radius: 70px;
+    }
+    name{
+        position: absolute;
+        top: 15px;
+        left: 102px;
+        z-index: 1030;
+        color: #000; 
+    }
+    level{
+        position: absolute;
+        top: 35px;
+        left: 102px;
+        z-index: 1030;
+        color: #9f9e9e;
+        font-size: 15px;
+    }
+    .menu-click{
+        position: absolute;
+    top: 17px;
+    left: 1250px;
+    z-index: 1030;
+    color: #000;
+    font-size: 40px;
+    }
+    .theme{
+        z-index: 1030;
+        position: relative;
+        float: right;
+        width: 40px;
+        height: 40px;
+        left: 190px;
+        top: 8px;
+        margin-right: 270px;
+        line-height: 44px;
+        border-radius: 20px;
+        font-size: 25px;
+        text-align: center;
+        cursor: pointer;
+        color: #444;
+        background: #c9c9c9;
+        transition: background .3s,color .3s;
+    }
+    .theme i{
+        position: absolute;
+    left: 7px;
+    top: 8px;
+    }
+    .menu{
+        position: absolute;
+        width: 70px;
+        height: 499px;
+        left: 1260px;
+        top: 120px;
+        background-color: #fff;
+        z-index: 1030;
+        border-radius: 20px;
+        transition: all .2s ease-in-out;
+        transform: scale(1);
+        transform-origin: left;
+        overflow: visible;
+    
+    }
+    .open{
+        position: absolute;
+        width: 250px;
+        height: 499px;
+        left: 1080px;
+        top: 120px;
+        background-color: #fff;
+        z-index: 1030;
+        border-radius: 20px;
+        transition: all .2s ease-in-out;
+        transform: scale(1);
+        transform-origin: left;
+        overflow: visible;
+    }
+    .open ~ main{
+        position: absolute;
+        width: 1000px;
+        height: 499px;
+        left: 30px;
+        top: 120px;
+        background-color: #fff;
+        z-index: 1030;
+        border-radius: 20px;
+        transition: all .2s ease-in-out;
+        transform: scale(1);
+        transform-origin: left;
+        overflow: visible; 
+    }
+
+
+    main{
+        position: absolute;
+        width: 1199px;
+        height: 499px;
+        left: 30px;
+        top: 120px;
+        background-color: #fff;
+        z-index: 1030;
+        border-radius: 20px;
+        transition: all .2s ease-in-out;
+        transform: scale(1);
+        transform-origin: left;
+        overflow: visible; 
+    }
+    body{
+            opacity: 1;
+        font-family: 'Roboto', sans-serif;
+        background-color: #d9d9d9;
+    }
+
+    .dark .navbar{
+        background-color: #000;
+        color: #fff!important;
+    }
+    .dark name{
+        background-color: #000;
+        color: #fff!important;
+    }
+    .dark i{
+        color: #fff!important;
+    }
+    .dark .theme{
+        background-color: #444;
+    }
+    .dark {
+        background-color: #72717b;
+    }
+    .dark .menu{
+        background-color: #000;
+        color: #fff!important;
+    }
+    .dark main{
+        background-color: #000;
+        color: #fff!important;
+    }
+
+}

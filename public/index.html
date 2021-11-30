@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Themes By Tung MMO</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/main.css'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<body class="main">
+<div class="navbar">
+    <div class="logo"><img src="/assets/img/avatar.jpg"></div><span class="verify fas fa-check-circle"></span>
+       <name> Vương Thanh Tùng</name>
+       <level>Quản trị viên</level>
+    <div class="theme" id="theme">
+  <i class="fas fa-sun "></i>
+</div><i class="fas fa-bars menu-click"></i>
+</div>
+<div class="menu">
+</div>
+<main></main>
+</body>
+<script>
+let theme = document.querySelector(".main");
+let themeBtn = document.querySelector("#theme");
+themeBtn.addEventListener("click", ()=>{
+    theme.classList.toggle("dark");
+});
+let menu = document.querySelector(".menu");
+let openmenuBtn = document.querySelector(".menu-click");
+openmenuBtn.addEventListener("click", ()=>{
+    menu.classList.toggle("open");
+});
+</script>
+</html>
