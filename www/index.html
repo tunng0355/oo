@@ -3,37 +3,494 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Themes By Tung MMO</title>
+    <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/main.css'>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src='main.js'></script>
 </head>
-<body class="main">
-<div class="navbar">
-    <div class="logo"><img src="/assets/img/avatar.jpg"></div><span class="verify fas fa-check-circle"></span>
-       <name> Vương Thanh Tùng</name>
-       <level>Quản trị viên</level>
-    <div class="theme" id="theme">
-  <i class="fas fa-sun "></i>
-</div><i class="fas fa-bars menu-click"></i>
-</div>
-<div class="menu">
-</div>
-<main></main>
+<style>
+    body{
+        font-family: 'Roboto', sans-serif;
+    }
+    a, H1, H2, .demo-font-chu {
+  font-family: 'Roboto', sans-serif;
+}
+    .nav{
+        background-color: #ffffff;
+        z-index: 1000;
+        width: 100%;
+        height: 60px;
+        box-shadow: 0 0 1px 0 rgb(0 0 0 / 50%);
+        border: 0;
+        position: fixed;
+        top: 0px;
+        left:0px;
+    }
+    .logo{ 
+    position: fixed;
+    top: -15px;
+    left: 15px;
+        
+    }
+    .logo h1{
+    font-size: 30px;
+    color: #00ff23;
+    }
+ 
+
+
+    /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .users-vip{
+    color: #000;
+    position: fixed;
+    left: 76%;
+    top: 12px;
+    background-color: #e3bf0d9c;
+    border-radius: 10px;
+    width: 80px;
+    height: 34px;
+    text-decoration: none;
+    box-sizing: border-box;
+   }
+   .users-vip p{
+    font-size: 20px;
+    position: fixed;
+    top: -2px;
+    left: 86%;
+    font-weight: 400;
+   }
+   .users-vip i{
+    position: fixed;
+    top: 19px;
+    left: 78%;
+    font-size: 20px;
+   }
+   .search{
+    position: fixed;
+    top: 13px;
+    left: 130px;
+   }
+   .search input[data="search"]{
+    color: #626262;
+    width: 100px;
+    height: 30px;
+    display: block;
+    padding-left: 10px;
+    padding-right: 30px;
+    font-size: 13px;
+    -webkit-appearance: none;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+   }
+   .tags{
+    width: 40%;
+    height: 60px;
+    border: 0;
+    position: fixed;
+    top: 10px;
+    left: 100%;
+   }
+   .tags div{
+    margin-left: 40px;
+    float: left;
+    margin: 5px;
+    padding: 0 15px;
+    border-radius: 15px;
+
+
+
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+
+   }
+   .Flash{
+    text-decoration: none;
+    position: fixed;
+    top: 7px;
+    left: 100%;
+    float: left;
+    width: 76px;
+    margin: 5px;
+    padding: 0 15px;
+    border-radius: 15px;
+    height: 33px;
+    line-height: 35px;
+    background-color: #00ff231a;
+    border: 1px solid #ccc;
+    color:#000;
+   }
+
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    .users-vip{
+    color: #000;
+    position: fixed;
+    left: 76%;
+    top: 12px;
+    background-color: #e3bf0d9c;
+    border-radius: 10px;
+    width: 80px;
+    height: 34px;
+    text-decoration: none;
+    box-sizing: border-box;
+   }
+   .users-vip p{
+    font-size: 20px;
+    position: fixed;
+    top: -2px;
+    left: 86%;
+    font-weight: 400;
+   }
+   .users-vip i{
+    position: fixed;
+    top: 19px;
+    left: 78%;
+    font-size: 20px;
+   }
+   .search{
+    position: fixed;
+    top: 13px;
+    left: 130px;
+   }
+   .search input[data="search"]{
+    color: #626262;
+    width: 100px;
+    height: 30px;
+    display: block;
+    padding-left: 10px;
+    padding-right: 30px;
+    font-size: 13px;
+    -webkit-appearance: none;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+   }
+   .tags{
+    width: 40%;
+    height: 60px;
+    border: 0;
+    position: fixed;
+    top: 10px;
+    left: 100%;
+   }
+   .tags div{
+    margin-left: 40px;
+    float: left;
+    margin: 5px;
+    padding: 0 15px;
+    border-radius: 15px;
+
+
+
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+
+   }
+   .Flash{
+    text-decoration: none;
+    position: fixed;
+    top: 7px;
+    left: 100%;
+    float: left;
+    width: 76px;
+    margin: 5px;
+    padding: 0 15px;
+    border-radius: 15px;
+    height: 33px;
+    line-height: 35px;
+    background-color: #00ff231a;
+    border: 1px solid #ccc;
+    color:#000;
+   }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    .users-vip{
+    color: #000;
+    position: fixed;
+    left: 76%;
+    top: 12px;
+    background-color: #e3bf0d9c;
+    border-radius: 10px;
+    width: 80px;
+    height: 34px;
+    text-decoration: none;
+    box-sizing: border-box;
+   }
+   .users-vip p{
+    font-size: 20px;
+    position: fixed;
+    top: -2px;
+    left: 86%;
+    font-weight: 400;
+   }
+   .users-vip i{
+    position: fixed;
+    top: 19px;
+    left: 78%;
+    font-size: 20px;
+   }
+   .search{
+    position: fixed;
+    top: 13px;
+    left: 130px;
+   }
+   .search input[data="search"]{
+    color: #626262;
+    width: 100px;
+    height: 30px;
+    display: block;
+    padding-left: 10px;
+    padding-right: 30px;
+    font-size: 13px;
+    -webkit-appearance: none;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+   }
+   .tags{
+    width: 40%;
+    height: 60px;
+    border: 0;
+    position: fixed;
+    top: 10px;
+    left: 100%;
+   }
+   .tags div{
+    margin-left: 40px;
+    float: left;
+    margin: 5px;
+    padding: 0 15px;
+    border-radius: 15px;
+
+
+
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+
+   }
+   .Flash{
+    text-decoration: none;
+    position: fixed;
+    top: 7px;
+    left: 100%;
+    float: left;
+    width: 76px;
+    margin: 5px;
+    padding: 0 15px;
+    border-radius: 15px;
+    height: 33px;
+    line-height: 35px;
+    background-color: #00ff231a;
+    border: 1px solid #ccc;
+    color:#000;
+   }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+
+    .users-vip{
+    color: #000;
+    position: fixed;
+    left: 76%;
+    top: 12px;
+    background-color: #e3bf0d9c;
+    border-radius: 10px;
+    width: 80px;
+    height: 34px;
+    text-decoration: none;
+    box-sizing: border-box;
+   }
+   .users-vip p{
+    font-size: 20px;
+    position: fixed;
+    top: -2px;
+    left: 86%;
+    font-weight: 400;
+   }
+   .users-vip i{
+    position: fixed;
+    top: 19px;
+    left: 78%;
+    font-size: 20px;
+   }
+   .search{
+    position: fixed;
+    top: 13px;
+    left: 130px;
+   }
+   .search input[data="search"]{
+    color: #626262;
+    width: 100px;
+    height: 30px;
+    display: block;
+    padding-left: 10px;
+    padding-right: 30px;
+    font-size: 13px;
+    -webkit-appearance: none;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+   }
+   .tags{
+    width: 40%;
+    height: 60px;
+    border: 0;
+    position: fixed;
+    top: 10px;
+    left: 100%;
+   }
+   .tags div{
+    margin-left: 40px;
+    float: left;
+    margin: 5px;
+    padding: 0 15px;
+    border-radius: 15px;
+
+
+
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+
+   }
+   .Flash{
+    text-decoration: none;
+    position: fixed;
+    top: 7px;
+    left: 100%;
+    float: left;
+    width: 76px;
+    margin: 5px;
+    padding: 0 15px;
+    border-radius: 15px;
+    height: 33px;
+    line-height: 35px;
+    background-color: #00ff231a;
+    border: 1px solid #ccc;
+    color:#000;
+   }
+
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .users-vip{
+    color: #000;
+    position: fixed;
+    left: 50%;
+    top: 12px;
+    background-color: #e3bf0d9c;
+    border-radius: 10px;
+    width: 80px;
+    height: 34px;
+    text-decoration: none;
+    box-sizing: border-box;
+   }
+   .users-vip p{
+    font-size: 20px;
+    position: fixed;
+    top: -2px;
+    left: 52.8%;
+    font-weight: 400;
+   }
+   .users-vip i{
+    position: fixed;
+    top: 19px;
+    left: 50.7%;
+    font-size: 20px;
+   }
+   .search{
+    position: fixed;
+    top: 13px;
+    left: 130px;
+   }
+   .search input[data="search"]{
+    color: #626262;
+    width: 500px;
+    height: 30px;
+    display: block;
+    padding-left: 10px;
+    padding-right: 30px;
+    font-size: 13px;
+    -webkit-appearance: none;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+   }
+   .tags{
+    width: 40%;
+    height: 60px;
+    border: 0;
+    position: fixed;
+    top: 10px;
+    left: 67%;
+   }
+   .tags div{
+    margin-left: 40px;
+    float: left;
+    margin: 5px;
+    padding: 0 15px;
+    border-radius: 15px;
+
+
+
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid #ccc;
+
+   }
+   .Flash{
+    text-decoration: none;
+    position: fixed;
+    top: 7px;
+    left: 57%;
+    float: left;
+    width: 76px;
+    margin: 5px;
+    padding: 0 15px;
+    border-radius: 15px;
+    height: 33px;
+    line-height: 35px;
+    background-color: #00ff231a;
+    border: 1px solid #ccc;
+    color:#000;
+   }
+}
+
+
+   
+
+
+
+
+</style>
+<body>
+<nav class="nav">
+    <div class='logo'><h1>FimHay</h1></div>
+    <div class="search"><input type="text"  data="search" placeholder="Tìm kiếm anime" autocomplete="off"></div>
+    <a href="#VIP"class="users-vip"><i class="fas fa-crown"></i><p>VIP </p> </a>
+    <a href="#tatden"  class="Flash"><i class="fas fa-moon"></i> Tắt Đèn</a>
+    <div class="tags"><div>Anime</div><div>Hành Động</div><div>Tình Cảm</div><div>Hài hước</div></div>
+     
+</nav>  
 </body>
-<script>
-let theme = document.querySelector(".main");
-let themeBtn = document.querySelector("#theme");
-themeBtn.addEventListener("click", ()=>{
-    theme.classList.toggle("dark");
-});
-let menu = document.querySelector(".menu");
-let openmenuBtn = document.querySelector(".menu-click");
-openmenuBtn.addEventListener("click", ()=>{
-    menu.classList.toggle("open");
-});
-</script>
 </html>
