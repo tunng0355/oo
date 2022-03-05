@@ -1,496 +1,284 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <script src='main.js'></script>
-</head>
-<style>
-    body{
-        font-family: 'Roboto', sans-serif;
-    }
-    a, H1, H2, .demo-font-chu {
-  font-family: 'Roboto', sans-serif;
-}
-    .nav{
-        background-color: #ffffff;
-        z-index: 1000;
-        width: 100%;
-        height: 60px;
-        box-shadow: 0 0 1px 0 rgb(0 0 0 / 50%);
-        border: 0;
-        position: fixed;
-        top: 0px;
-        left:0px;
-    }
-    .logo{ 
-    position: fixed;
-    top: -15px;
-    left: 15px;
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
+    <style data-styles="">ion-icon{visibility:hidden}.hydrated{visibility:inherit}</style>
+
+    <link rel="stylesheet" href="/public/css/app.css">
+    <link rel="stylesheet" href="/public/css/responsive.css">
+    <link rel="stylesheet" href="/public/css/vendor.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.0.0/css/all.css">
+
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
         
-    }
-    .logo h1{
-    font-size: 30px;
-    color: #00ff23;
-    }
- 
+        .dark-mode {
+            align-items: stretch;
+            min-height: 100vh;
+            max-width: 408px;
+            margin: 0 auto;
+            background-color: #010012!important;
+            color: #fff;
+        }
+        
+        .mode-item {
+            backdrop-filter: blur(6px);
+            background-color: rgb(1 0 18);
+            right: 0px;
+            top: 4%;
+            position: fixed;
+            font-size: 20px;
+            margin-top: -27px;
+            text-align: center;
+            padding: 3px 9px;
+            z-index: 1208;
+            color: #fff;
+            border-radius: 5px 0px 0px 21px;
+            transform: none;
+        }
+        /* Chrome, Safari, Opera */
+        
+        @-webkit-keyframes xoayvong {
+            from {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+            }
+        }
+        /* Standard syntax */
+        
+        @keyframes xoayvong {
+            from {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+            }
+        }
+        
+        .setup {
+            animation: xoayvong 2s linear 0s infinite;
+            -webkit-animation: xoayvong 2s linear 0s infinite;
+            -moz-animation: xoayvong 2s linear 0s infinite;
+            -o-animation: xoayvong 2s linear 0s infinite;
+        }
+        
+        .setting {
+            backdrop-filter: blur(6px);
+            background-color: rgb(56 108 240);
+            right: 0px;
+            top: 50%;
+            position: fixed;
+            font-size: 20px;
+            margin-top: -27px;
+            text-align: center;
+            padding: 3px 8px;
+            z-index: 1202;
+            color: #fff;
+            border-radius: 5px 0px 0px 15px;
+            transform: none;
+        }
+        
+        #cover-image {
+            background-image: url('/public/images/ItsukishimaGateJapan-day.gif');
+        }
+        
+        .dark-mode #cover-image {
+            background-image: url('https://img.wattpad.com/3f30f5cbca43c88e124b713fffd77d20f9f3cbe8/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f58423565756e50316366713375773d3d2d3832353938333631332e313565386633366430643733373638303832383732353734383631322e676966');
+        }
+        
+        .dark-mode .container header .bio-story {
+            position: relative;
+            display: grid;
+            grid-template-columns: 70px auto;
+            height: 70px;
+            width: 100%;
+            background-color: #000026;
+            border-radius: 20px;
+            -webkit-box-shadow: 7px 7px 20px -5px rgb(0 0 0 / 40%);
+            box-shadow: 7px 7px 20px -5px rgb(0 0 0 / 10%);
+            margin-bottom: 15px;
+        }
+        
+        .dark-mode .container #content-body #link-box .link-item {
+            position: relative;
+            display: grid;
+            grid-template-columns: 70px auto 65px;
+            height: 70px;
+            width: 100%;
+            background-color: #000026;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            -webkit-box-shadow: 7px 7px 20px -5px rgb(0 0 0 / 40%);
+            box-shadow: 7px 7px 20px -5px rgb(0 0 0 / 10%);
+            transition: all 250ms ease-in-out;
+        }
+        #avatar-image{
+    /*
+        filter: saturate(2); //  màu bão hòa
+        filter: sepia(100%); // màu nâu đỏ
+        backdrop-filter: blur(64px); // mờ phông nền
+       	backdrop-filter: brightness(2); // độ sáng phông nền
+        backdrop-filter: contrast(2); // màu tương phản
+        backdrop-filter: grayscale(100%); // phông nền-xám
+        backdrop-filter: hue-rotate(180deg); // Xoay màu của phông nền
+        backdrop-filter: invert(100%); // Đảo ngược phông nền
+        backdrop-filter: opacity(0.4); // độ mờ phông nền
+        backdrop-filter: saturate(2); // phông nền bão hòa
+        backdrop-filter: sepia(100%); // phồng nền nâu đỏ
+        filter: invert(100%); // Đảo ngược
+        filter: hue-rotate(180deg); // xoay Huế
+        filter: grayscale(100%); // Thang độ xám
+        filter: blur(64px); // Mơ hồ
 
 
-    /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .users-vip{
-    color: #000;
-    position: fixed;
-    left: 76%;
-    top: 12px;
-    background-color: #e3bf0d9c;
-    border-radius: 10px;
-    width: 80px;
-    height: 34px;
-    text-decoration: none;
-    box-sizing: border-box;
-   }
-   .users-vip p{
-    font-size: 20px;
-    position: fixed;
-    top: -2px;
-    left: 86%;
-    font-weight: 400;
-   }
-   .users-vip i{
-    position: fixed;
-    top: 19px;
-    left: 78%;
-    font-size: 20px;
-   }
-   .search{
-    position: fixed;
-    top: 13px;
-    left: 130px;
-   }
-   .search input[data="search"]{
-    color: #626262;
-    width: 100px;
-    height: 30px;
-    display: block;
-    padding-left: 10px;
-    padding-right: 30px;
-    font-size: 13px;
-    -webkit-appearance: none;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-   }
-   .tags{
-    width: 40%;
-    height: 60px;
-    border: 0;
-    position: fixed;
-    top: 10px;
-    left: 100%;
-   }
-   .tags div{
-    margin-left: 40px;
-    float: left;
-    margin: 5px;
-    padding: 0 15px;
-    border-radius: 15px;
-
-
-
-    height: 30px;
-    line-height: 28px;
-    border: 1px solid #ccc;
-
-   }
-   .Flash{
-    text-decoration: none;
-    position: fixed;
-    top: 7px;
-    left: 100%;
-    float: left;
-    width: 76px;
-    margin: 5px;
-    padding: 0 15px;
-    border-radius: 15px;
-    height: 33px;
-    line-height: 35px;
-    background-color: #00ff231a;
-    border: 1px solid #ccc;
-    color:#000;
-   }
-
-
-
+    */
+    filter: saturate(2); 
 }
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-    .users-vip{
-    color: #000;
-    position: fixed;
-    left: 76%;
-    top: 12px;
-    background-color: #e3bf0d9c;
-    border-radius: 10px;
-    width: 80px;
-    height: 34px;
-    text-decoration: none;
-    box-sizing: border-box;
-   }
-   .users-vip p{
-    font-size: 20px;
-    position: fixed;
-    top: -2px;
-    left: 86%;
-    font-weight: 400;
-   }
-   .users-vip i{
-    position: fixed;
-    top: 19px;
-    left: 78%;
-    font-size: 20px;
-   }
-   .search{
-    position: fixed;
-    top: 13px;
-    left: 130px;
-   }
-   .search input[data="search"]{
-    color: #626262;
-    width: 100px;
-    height: 30px;
-    display: block;
-    padding-left: 10px;
-    padding-right: 30px;
-    font-size: 13px;
-    -webkit-appearance: none;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-   }
-   .tags{
-    width: 40%;
-    height: 60px;
-    border: 0;
-    position: fixed;
-    top: 10px;
-    left: 100%;
-   }
-   .tags div{
-    margin-left: 40px;
-    float: left;
-    margin: 5px;
-    padding: 0 15px;
-    border-radius: 15px;
-
-
-
-    height: 30px;
-    line-height: 28px;
-    border: 1px solid #ccc;
-
-   }
-   .Flash{
-    text-decoration: none;
-    position: fixed;
-    top: 7px;
-    left: 100%;
-    float: left;
-    width: 76px;
-    margin: 5px;
-    padding: 0 15px;
-    border-radius: 15px;
-    height: 33px;
-    line-height: 35px;
-    background-color: #00ff231a;
-    border: 1px solid #ccc;
-    color:#000;
-   }
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-
-    .users-vip{
-    color: #000;
-    position: fixed;
-    left: 76%;
-    top: 12px;
-    background-color: #e3bf0d9c;
-    border-radius: 10px;
-    width: 80px;
-    height: 34px;
-    text-decoration: none;
-    box-sizing: border-box;
-   }
-   .users-vip p{
-    font-size: 20px;
-    position: fixed;
-    top: -2px;
-    left: 86%;
-    font-weight: 400;
-   }
-   .users-vip i{
-    position: fixed;
-    top: 19px;
-    left: 78%;
-    font-size: 20px;
-   }
-   .search{
-    position: fixed;
-    top: 13px;
-    left: 130px;
-   }
-   .search input[data="search"]{
-    color: #626262;
-    width: 100px;
-    height: 30px;
-    display: block;
-    padding-left: 10px;
-    padding-right: 30px;
-    font-size: 13px;
-    -webkit-appearance: none;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-   }
-   .tags{
-    width: 40%;
-    height: 60px;
-    border: 0;
-    position: fixed;
-    top: 10px;
-    left: 100%;
-   }
-   .tags div{
-    margin-left: 40px;
-    float: left;
-    margin: 5px;
-    padding: 0 15px;
-    border-radius: 15px;
-
-
-
-    height: 30px;
-    line-height: 28px;
-    border: 1px solid #ccc;
-
-   }
-   .Flash{
-    text-decoration: none;
-    position: fixed;
-    top: 7px;
-    left: 100%;
-    float: left;
-    width: 76px;
-    margin: 5px;
-    padding: 0 15px;
-    border-radius: 15px;
-    height: 33px;
-    line-height: 35px;
-    background-color: #00ff231a;
-    border: 1px solid #ccc;
-    color:#000;
-   }
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-
-    .users-vip{
-    color: #000;
-    position: fixed;
-    left: 76%;
-    top: 12px;
-    background-color: #e3bf0d9c;
-    border-radius: 10px;
-    width: 80px;
-    height: 34px;
-    text-decoration: none;
-    box-sizing: border-box;
-   }
-   .users-vip p{
-    font-size: 20px;
-    position: fixed;
-    top: -2px;
-    left: 86%;
-    font-weight: 400;
-   }
-   .users-vip i{
-    position: fixed;
-    top: 19px;
-    left: 78%;
-    font-size: 20px;
-   }
-   .search{
-    position: fixed;
-    top: 13px;
-    left: 130px;
-   }
-   .search input[data="search"]{
-    color: #626262;
-    width: 100px;
-    height: 30px;
-    display: block;
-    padding-left: 10px;
-    padding-right: 30px;
-    font-size: 13px;
-    -webkit-appearance: none;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-   }
-   .tags{
-    width: 40%;
-    height: 60px;
-    border: 0;
-    position: fixed;
-    top: 10px;
-    left: 100%;
-   }
-   .tags div{
-    margin-left: 40px;
-    float: left;
-    margin: 5px;
-    padding: 0 15px;
-    border-radius: 15px;
-
-
-
-    height: 30px;
-    line-height: 28px;
-    border: 1px solid #ccc;
-
-   }
-   .Flash{
-    text-decoration: none;
-    position: fixed;
-    top: 7px;
-    left: 100%;
-    float: left;
-    width: 76px;
-    margin: 5px;
-    padding: 0 15px;
-    border-radius: 15px;
-    height: 33px;
-    line-height: 35px;
-    background-color: #00ff231a;
-    border: 1px solid #ccc;
-    color:#000;
-   }
-
-
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .users-vip{
-    color: #000;
-    position: fixed;
-    left: 50%;
-    top: 12px;
-    background-color: #e3bf0d9c;
-    border-radius: 10px;
-    width: 80px;
-    height: 34px;
-    text-decoration: none;
-    box-sizing: border-box;
-   }
-   .users-vip p{
-    font-size: 20px;
-    position: fixed;
-    top: -2px;
-    left: 52.8%;
-    font-weight: 400;
-   }
-   .users-vip i{
-    position: fixed;
-    top: 19px;
-    left: 50.7%;
-    font-size: 20px;
-   }
-   .search{
-    position: fixed;
-    top: 13px;
-    left: 130px;
-   }
-   .search input[data="search"]{
-    color: #626262;
-    width: 500px;
-    height: 30px;
-    display: block;
-    padding-left: 10px;
-    padding-right: 30px;
-    font-size: 13px;
-    -webkit-appearance: none;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-   }
-   .tags{
-    width: 40%;
-    height: 60px;
-    border: 0;
-    position: fixed;
-    top: 10px;
-    left: 67%;
-   }
-   .tags div{
-    margin-left: 40px;
-    float: left;
-    margin: 5px;
-    padding: 0 15px;
-    border-radius: 15px;
-
-
-
-    height: 30px;
-    line-height: 28px;
-    border: 1px solid #ccc;
-
-   }
-   .Flash{
-    text-decoration: none;
-    position: fixed;
-    top: 7px;
-    left: 57%;
-    float: left;
-    width: 76px;
-    margin: 5px;
-    padding: 0 15px;
-    border-radius: 15px;
-    height: 33px;
-    line-height: 35px;
-    background-color: #00ff231a;
-    border: 1px solid #ccc;
-    color:#000;
-   }
+.dark{
+    background: #000526!important;
 }
 
 
-   
+    </style>
+</head>
 
-
-
-
-</style>
 <body>
-<nav class="nav">
-    <div class='logo'><h1>FimHay</h1></div>
-    <div class="search"><input type="text"  data="search" placeholder="Tìm kiếm anime" autocomplete="off"></div>
-    <a href="#VIP"class="users-vip"><i class="fas fa-crown"></i><p>VIP </p> </a>
-    <a href="#tatden"  class="Flash"><i class="fas fa-moon"></i> Tắt Đèn</a>
-    <div class="tags"><div>Anime</div><div>Hành Động</div><div>Tình Cảm</div><div>Hài hước</div></div>
-     
-</nav>  
+    <div id="root">
+        <div id="main" class="">
+            <div class="container">
+                <header>
+                    <div id="cover-image"></div>
+                    <div id="profile-header">
+                        <div id="avatar-image" style="background-image: url('    https://i.pinimg.com/236x/cb/9e/69/cb9e69e1b395cf484beed8fa71d1ff69.jpg');"></div>
+                        <a href="javascript:void(0)" class="mode-item">
+                            <i class="fa-solid fa-moon"></i>
+                        </a>
+                        <div id="name">
+                            <p id="first-name" class="names">Vương Thanh Tùng<i class="fas fa-check-circle"></i>
+                            </p>
+                            <p id="last-name" class="names"></p>
+                            <div id="skills">
+
+                                <div class="skill-item" style="color: #EF9D64;">Developer</div>
+
+                                <div class="skill-item" style="color: #85D18A;">Designer</div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bio-story">
+                        <div class="bio-story-thumb" style="background-image: url('./public/images/admin.png');"></div>
+                        <div class="bio-story-content">
+                            <p>LIÊN HỆ ADMIN</p>
+                            <span>Nguyễn Tiến Việt Hoàng</span>
+                        </div>
+                    </div>
+
+                </header>
+
+                <div id="content-body">
+                    <p class="drop-title">Liên Kết Cá Nhân</p>
+                    <div id="link-box">
+
+                        <div class="link-item">
+                            <div class="bio-story-thumb" style="background-image: url('./public/images/flatform/wallet.png');"></div>
+                            <div class="link-content">
+                                <p>Thông Tin Thanh Toán</p>
+                                <span onclick="window.open('https://iamhoang.info/payment', '_blank')">Vương Thanh Tùng</span>
+                            </div>
+                            <div class="link-btn">
+                                <div class="link-btn-chill light-orange" onclick="window.open('https://iamhoang.info/payment', '_blank')">OPEN</div>
+                            </div>
+                        </div>
+
+                        <div class="link-item">
+                            <div class="bio-story-thumb" style="background-image: url('./public/images/flatform/facebook.jpg');"></div>
+                            <div class="link-content">
+                                <p>Facebook</p>
+                                <span onclick="window.open('https://www.facebook.com/iamhoang.info/', '_blank')">@tungmmo</span>
+                            </div>
+                            <div class="link-btn">
+                                <div class="link-btn-chill light-orange" onclick="window.open('https://www.facebook.com/iamhoang.info/', '_blank')">OPEN</div>
+                            </div>
+                        </div>
+
+                        <div class="link-item">
+                            <div class="bio-story-thumb" style="background-image: url('./public/images/flatform/zalo.jpg');"></div>
+                            <div class="link-content">
+                                <p>Zalo</p>
+                                <span onclick="window.open('https://zalo.me/hoang10112006', '_blank')">Vương Thanh Tùn</span>
+                            </div>
+                            <div class="link-btn">
+                                <div class="link-btn-chill light-orange" onclick="window.open('https://zalo.me/hoang10112006', '_blank')">OPEN</div>
+                            </div>
+                        </div>
+
+                        <div class="link-item">
+                            <div class="bio-story-thumb" style="background-image: url('./public/images/flatform/phone.jpg');"></div>
+                            <div class="link-content">
+                                <p>Hotline</p>
+                                <span onclick="window.open('tel:0355173805', '_blank')">03.5517.3805</span>
+                            </div>
+                            <div class="link-btn">
+                                <div class="link-btn-chill light-orange" onclick="window.open('tel:0355173805', '_blank')">OPEN</div>
+                            </div>
+                        </div>
+
+                        <div class="link-item">
+                            <div class="bio-story-thumb" style="background-image: url('./public/images/flatform/gmail.jpg');"></div>
+                            <div class="link-content">
+                                <p>Gmail</p>
+                                <span onclick="window.open('mailto:contact.tungmmo@gmail.com', '_blank')">contact.tungmmo@gmail.com</span>
+                            </div>
+                            <div class="link-btn">
+                                <div class="link-btn-chill light-orange" onclick="window.open('mailto:contact.tungmmo@gmail.com', '_blank')">OPEN</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="javascript:void(0)" class="setting">
+            <i class="setup fa-solid fa-gear"></i>
+        </a>
+
+    </div>
 </body>
+<script>
+    document.querySelector('link[type="image/x-icon"]').href='/public/images/home.png';
+    let mode = document.querySelector('.mode-item');
+    let main = document.querySelector("#main");
+    let root = document.querySelector("#root");
+    mode.addEventListener("click", () => {
+        main.classList.toggle("dark-mode");
+        root.classList.toggle("dark");
+    });
+    
+</script>
 </html>
